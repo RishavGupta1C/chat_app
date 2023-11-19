@@ -17,16 +17,16 @@ class _AuthScreenState extends State<AuthScreen> {
       body: Center(
         child: SingleChildScrollView(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            // mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
                 margin: const EdgeInsets.only(
                   left: 20,
-                  top: 30,
+                  top: 10,
                   right: 20,
                   bottom: 20,
                 ),
-                width: 200,
+                width: 150,
                 child: Image.asset('assets/images/chat.png'),
               ),
               Card(
@@ -34,32 +34,34 @@ class _AuthScreenState extends State<AuthScreen> {
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: SingleChildScrollView(
-                    child: Form(
-                      child: Column(
-                        // This column will take as much space as needed by the content
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          TextFormField(
-                            decoration: const InputDecoration(
-                              labelText: 'Email Address',
-                            ),
-                            keyboardType: TextInputType.emailAddress,
-                            autocorrect: false,
-                            textCapitalization: TextCapitalization.none,
+                    // child: Form(
+                    child: Column(
+                      // This column will take as much space as needed by the content
+                      // mainAxisSize: MainAxisSize.min,
+                      children: [
+                        TextFormField(
+                          decoration: const InputDecoration(
+                            labelText: 'Email Address',
                           ),
-                          TextFormField(
-                            decoration: const InputDecoration(
-                              labelText: 'Password',
-                            ),
-                            obscureText: true,
-                            obscuringCharacter: '*',
+                          keyboardType: TextInputType.emailAddress,
+                          autocorrect: false,
+                          textCapitalization: TextCapitalization.none,
+                        ),
+                        TextFormField(
+                          decoration: const InputDecoration(
+                            labelText: 'Password',
                           ),
-                        ],
-                      ),
+                          obscureText: true,
+                          obscuringCharacter: '*',
+                        ),
+                        const SizedBox(height: 10),
+                        // ElevatedButton(onPressed: (){}, child: ),
+                      ],
                     ),
                   ),
                 ),
               ),
+              // ),
             ],
           ),
         ),
